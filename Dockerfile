@@ -6,3 +6,7 @@ RUN useradd -m -d /home/deploy -s /bin/bash -g staff deploy
 RUN curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 RUN gem install bundler
 RUN gem install rails -v=4.1.6
+RUN su deploy
+RUN mkdir shared
+RUN mkdir release
+RUM mkdir current
