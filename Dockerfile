@@ -5,6 +5,11 @@ RUN apt-get update && apt-get install -y ruby ruby-dev git build-essential opens
 RUN useradd -m -d /home/deploy -s /bin/bash -g staff deploy
 RUN curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 RUN gem install bundler
+RUN gem install therubyracer
+RUN gem install rubygems-update
+RUN update_rubygems
+RUN gem update --system
+
 RUN gem install rails -v=4.1.6
 
 RUN su deploy
