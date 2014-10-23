@@ -7,6 +7,17 @@ RUN curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-insta
 RUN gem install bundler
 RUN gem install rails -v=4.1.6
 RUN su deploy
-RUN mkdir shared
-RUN mkdir release
-RUM mkdir current
+RUN mkdir application
+RUN mkdir application/shared
+RUN mkdir application/releases
+RUM mkdir application/current
+RUM mkdir application/shared/assets
+RUM mkdir application/shared/bundle
+RUM mkdir application/shared/cache-copy
+RUM mkdir application/shared/config
+RUM mkdir application/shared/log
+RUM mkdir application/shared/tmp
+RUM mkdir application/shared/tmp/cache
+RUM mkdir application/shared/tmp/pids
+RUM mkdir application/shared/tmp/sessions
+RUM mkdir application/shared/tmp/sockets
